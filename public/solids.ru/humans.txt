@@ -1,0 +1,13 @@
+/* TEAM */
+Your title: Viktor Matushevskyi
+Site: viktorminator@mail.ru, http://modx.ws
+Twitter: viktorminator
+Location: Zhytomir, Ukraine
+
+/* THANKS */
+Valentin Rasulov http://artdevue.com
+/* SITE */
+Last update: 2013/05/28 
+Standards: minimalism at design.
+Components: jQuery, MODX Revolution
+Software: MODX Revolution

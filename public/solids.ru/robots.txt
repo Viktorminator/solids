@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /manager/
+Disallow: /assets/components/
+Disallow: /core/
+Disallow: /mgr/
+Disallow: /connectors/
+Disallow: /index.php
+Disallow: *?
+Disallow: /*search
+
+Host: solids.ru
+Sitemap: http://solids.ru/sitemap.xml

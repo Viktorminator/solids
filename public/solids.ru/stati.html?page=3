@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="norton-safeweb-site-verification" content="8mnr2vblm6vez-2t6bk30anrpymcg8iekk8ik0gie992dbexv5fllcucloxa1abu0rrpgj58xlueulusvlpsghykt5demxxenx4cl0in1qztqkebebegt8z7onnqii5x" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=9" />
+<base href="http://solids.ru/" />
+<title>Статьи и обзоры</title>
+<meta name='description' content='Статьи про бухгалтерский, кадровый учет, юриспруденцию и стратегический консалтинг' />
+<meta name='keywords' content='' />
+<link rel="canonical" href="http://solids.ru/stati.html" />
+<link rel='shortcut icon' href="/favicon.ico" type="ico" />
+<link rel='apple-touch-icon-precomposed' href="/css/i/apple-touch-icon-57x57-precomposed.png" />
+<link rel='apple-touch-icon-precomposed' sizes="72x72" href="/css/i/apple-touch-icon-72x72-precomposed.png" />
+<link rel='apple-touch-icon-precomposed' sizes="114x114" href="/css/i/apple-touch-icon-114x114-precomposed.png" />
+<link rel='stylesheet' href="/css/common.css" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery.formvalidator.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#send").click(function() {
+
+            $("#myform").validate({
+            errorTitle : 'Отправка формы не удалась!',
+            badEmail : 'Вы ввели неправильный e-mail',
+            badTelephone : 'Вы ввели неправильный номер телефона',
+            requiredFields : 'Вы не заполнили все поля'}
+            )
+            if (!$("div").is(".jquery_form_error_message")) { $("#myform").submit() }
+
+        });
+        })
+</script>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?79"></script>
+<script type="text/javascript">VK.init({apiId: 3267815, onlyWidgets: true});</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37025894-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter18475651 = new Ya.Metrika({id:18475651,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/18475651" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body class="color-scheme-1">
+<div id="layout">
+    <div id="header">
+        <ul class="navigation-secondary"><li ><a href="o-kompanii.html">О компании</a><div class="angle"></div></li>
+<li  class="selected"><strong><a href="stati.html">Статьи</a></strong><div class="angle"></div></li>
+<li ><a href="novosti.html">Новости</a><div class="angle"></div></li>
+<li ><a href="faq.html">Ответы</a><div class="angle"></div></li>
+</ul>
+
+        <div class="logo"><a href="http://solids.ru/"></a></div>
+
+        <ul class="navigation-phone">
+            <li class="phone">+7 (495) 698-97-97</li>
+            <li><a href="pozvonite-mne.html">Позвоните мне</a></li>
+        </ul>
+        <ul class="navigation-primary">
+<li><a href="buxgalterskoe-soprovozhdenie.html"><img src="css/engraving-25-accounting.gif" alt="" />Бухгалтерский аутсорсинг</a></li>
+
+
+<li><a href="konsalting.html"><img src="css/engraving-25-consulting.gif" alt="" />Стратегический консалтинг</a></li>
+
+
+<li><a href="kadrovoe-deloproizvodstvo.html"><img src="css/engraving-25-recordskeeping.gif" alt="" />Кадровое делопроизводство</a></li>
+
+
+<li><a href="yuridicheskie-uslugi.html"><img src="css/engraving-25-legal.gif" alt="" />Юридические услуги</a></li>
+
+</ul>
+    </div>
+<div id="content">
+    	<h1 class="big">Статьи и обзоры</h1>
+        <div class="columns-2">
+    		<div class="col-1">
+                <h3><a href="prishla-nalogovaya-proverka.html" title="Без паники! Или что делать, если к вам пришла налоговая проверка.">Что делать, если к вам пришла налоговая проверка?</a></h3>
+<p class="desc">29 ноября 2012, Ирина Чепурова</p>
+<p class="mini">Существенные нарушения в рассмотрении материалов по итогам контрольной процедуры ведут к отмене решений по итогам проверки. Это входит в полномочия УФНС по региону, а в случае необходимости – судебных органов.
+Обязательные и дополнительные меры налогового контроля могут быть применены до выноса решения о привлечении налогоплательщика к ответственности.</p>
+<h3><a href="chem-grozit-otsutstvie-dogovora.html" title="Чем грозит отсутствие договора?">Чем грозит отсутствие договора?</a></h3>
+<p class="desc">21 ноября 2012, Ирина Чепурова</p>
+<p class="mini">Сама по себе недействительная сделка не влечет юридических последствий. Но в 167 статье ГК РФ упоминается, что исключением являются соглашения, признанные недействительными с момента совершения. В зависимости от обстоятельств договор или непосредственно сделка признается ничтожной или оспоримой. Согласно ГК, они имеют разные правовые признаки и последствия. Априори ничтожными признаются все сделки, заключенные с отсутствием договора или с признанием его недействительным.</p>
+<h3><a href="nevernoe-vedenie-buxgalterii-kto-vinovat.html" title="Неверное ведение бухгалтерии: кто виноват и какие будут последствия?">Неверное ведение бухгалтерии: кто виноват и какие будут последствия?</a></h3>
+<p class="desc">08 ноября 2012, Ольга Киреева</p>
+<p class="mini">Работодатель имеет право привлекать своих подчиненных к&nbsp;дисциплинарной и&nbsp;материальной ответственности за&nbsp;нарушение профессиональных обязанностей. В&nbsp;отношении сотрудников бухгалтерии и&nbsp;в&nbsp;особенности главного бухгалтера компании это правило применяется с&nbsp;особой строгостью. Порядок приема на&nbsp;работу и&nbsp;увольнение бухгалтера за&nbsp;допущение ошибок в&nbsp;ведении учета регламентируется не&nbsp;только Трудовым кодексом, но&nbsp;и&nbsp;Федеральным законом N&nbsp;<nobr>129-ФЗ</nobr> &laquo;О&nbsp;бухгалтерском учете&raquo;. Фактически, бухгалтер&nbsp;&mdash; это второе лицо компании. Без его подписи финансовые и&nbsp;расчетные документы, кредитные обязательства не&nbsp;имеют юридической силы. Обладая широким кругом полномочий, бухгалтер несет и&nbsp;повышенную меру ответственности в&nbsp;случае ошибок и&nbsp;неточностей.</p>
+			
+
+            </div>
+		</div>
+                <ul class="pagination">
+                  <li><a href="stati.html?page=2">...</a></li><li><a href="stati.html">1</a></li>
+<li><a href="stati.html?page=2">2</a></li>
+<li class="selected"><div class="angle"></div><strong>3</strong></li>
+                </ul>
+</div>
+ <div id="imprint">
+        <ul class="social">
+    		<li class="vk"><div id="vk_like"></div><script type="text/javascript">VK.Widgets.Like("vk_like", {type: "button", height: 20});</script></li><li class="fb"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><div class="fb-like" data-href="http://www.solids.ru" data-send="false" data-layout="button_count" data-width="101" data-show-faces="false"></div></li><li class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://solids.ru" data-count="none" data-lang="ru">Твитнуть</a><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li><li class="gp"><g:plusone size="medium" width="32"></g:plusone><script type="text/javascript"> (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script></li>
+		</ul>
+        <hr />
+        <div class="copyrights">
+            <p>©&nbsp;2012—2013 ООО&nbsp;«Финсервис»</p>
+        </div>
+        
+        <div class="address">
+            <p>Москва, ул. Угрешская, 2, стр. 33, офис 9
+                <a class="nobr" href="kontaktyi.html">Контактная информация</a>
+            </p>
+        </div>
+        <!--p class="vcard" style="visibility:hidden;">
+         <p>
+           <span class="category">Компания</span>
+           <span class="fn org">Solid's</span>
+         </p>
+         <p class="adr">
+           <span class="locality">г. Москва</span>,
+           <span class="street-address">ул. Угрешская, 2, стр. 33, офис 9</span>
+         </p>
+         <p>Телефон: <span class="tel">+7 (495) 698-97-97</span></div>
+         <p>Мы работаем <span class="workhours">ежедневно с 09:00 до 24:00</span>
+           <span class="url">
+             <span class="value-title" title="http://solids.ru/"> </span>
+           </span>
+         </p>
+        </p-->
+        <form action="search/" class="search" method="get">
+
+    <input class="keywords" type="text" name="query" value="поиск" onclick="if (this.value == 'поиск') {this.value = '';}" onblur="if (this.value == '') {this.value = 'поиск';}"/>
+	<input class="go" type="image" value="Искать!" src="/css/i/search.gif"/>
+
+</form>
+
+    </div>
+</div>
+<!-- Google Code for &#1058;&#1077;&#1075; &#1088;&#1077;&#1084;&#1072;&#1088;&#1082;&#1077;&#1090;&#1080;&#1085;&#1075;&#1072; -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 988764364;
+var google_conversion_label = "ni2dCPyZiAUQzLG91wM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988764364/?value=0&amp;label=ni2dCPyZiAUQzLG91wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+</body></html>
