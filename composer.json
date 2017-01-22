@@ -8,7 +8,9 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-debugbar": "^2.3",
         "cucxabeng/simple-html-dom": "dev-master",
-        "laravel/framework": "5.3.*"
+        "duzun/hquery": "^1.5",
+        "laravel/framework": "5.3.*",
+        "miroc/laravel-adminer": "^4.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
