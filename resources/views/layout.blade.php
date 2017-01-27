@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=9" />
     <base href="http://solids.dev/" />
     <title>Бухгалтерское обслуживание , юридические услуги , кадровое делопроизводство, аудит и консалтинг от Солидс</title>
-    <meta name='description' content='Услуги консалтинговой компании Солидс: бухгалтерское обслуживание , юридические услуги , кадровое делопроизводство, аудит , консалтинг' />
-    <meta name='keywords' content='' />
+    <meta name='description' content='{{ $post->description | 'Услуги консалтинговой компании Солидс: бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит, консалтинг' }}' />
+    <meta name='keywords' content='{{ $post->keywords }}' />
     <link rel="canonical" href="http://solids.ru/" />
     <link rel='shortcut icon' href="/favicon.ico" type="ico" />
     <link rel="author" href="humans.txt" />

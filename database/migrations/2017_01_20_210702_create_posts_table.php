@@ -16,12 +16,15 @@ class CreatePostsTable extends Migration
         Schema::enableForeignKeyConstraints();
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title')->nullable();
             $table->string('pagetitle')->nullable();
             $table->string('alias')->nullable();
+            $table->text('keywords')->nullable();
             $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->tinyInteger('published')->nullable();
             $table->text('parent')->nullable();
+            $table->boolean('is_container')->default(false);
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('authors');
             $table->timestamps();

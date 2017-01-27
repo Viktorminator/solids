@@ -13,11 +13,15 @@ class PostController extends Controller
 {
     //
     public function index() {
-        return view('index');
+        $post = Posts::whereAlias('index.html')->first();
+        return view('index')->with('post', $post);
+        //return view('index');
     }
 
     public function about() {
-        return view('about-company');
+        $post = Posts::whereAlias('o-kompanii.html')->first();
+        $list = Posts::whereParent('71')->get();
+        return view('about-company')->with(compact('post','list'));
     }
 
     public function articles() {

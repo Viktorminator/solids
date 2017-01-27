@@ -7,7 +7,6 @@
     "require": {
         "php": ">=5.6.4",
         "barryvdh/laravel-debugbar": "^2.3",
-        "cucxabeng/simple-html-dom": "dev-master",
         "duzun/hquery": "^1.5",
         "laravel/framework": "5.3.*",
         "miroc/laravel-adminer": "^4.2"

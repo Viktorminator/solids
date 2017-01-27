@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b52d08fa64e8bbae367d7b2e0cd44540",
-    "content-hash": "8900aa4b196424bc71a8a9e31c109eb6",
+    "hash": "26261cb4716ca427964bc1400d2c7c5a",
+    "content-hash": "d43211b63b5cbfe87be4856db4397b08",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -114,39 +114,6 @@
                 "preload"
             ],
             "time": "2016-09-16 12:50:15"
-        },
-        {
-            "name": "cucxabeng/simple-html-dom",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cucxabeng/simple-html-dom.git",
-                "reference": "b0beee37b4bdb4e3cebf0e07ea97ce82552f833f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cucxabeng/simple-html-dom/zipball/b0beee37b4bdb4e3cebf0e07ea97ce82552f833f",
-                "reference": "b0beee37b4bdb4e3cebf0e07ea97ce82552f833f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "cucxabeng\\HtmlDom": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "HaiDang",
-                    "email": "cucxabeng@gmail.com"
-                }
-            ],
-            "description": "SimpleHtmlDom for Laravel 5",
-            "time": "2016-03-25 09:26:34"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3700,9 +3667,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "cucxabeng/simple-html-dom": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
