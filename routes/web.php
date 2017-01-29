@@ -18,6 +18,13 @@ Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
 
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
 Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostController@about']);
+
+Route::get('dostizheniya.html', ['uses' => 'PostController@about']);
+Route::get('komanda.html', ['uses' => 'PostController@about']);
+Route::get('kontaktyi.html', ['uses' => 'PostController@about']);
+Route::get('rekvizityi.html', ['uses' => 'PostController@about']);
+Route::get('smi-o-nas.html', ['uses' => 'PostController@about']);
+
 Route::get('/stati.html', ['as' => 'stati.html', 'uses' => 'PostController@articles']);
 Route::get('/novosti.html', ['as' => 'novosti.html', 'uses' => 'PostController@news']);
 Route::get('/faq.html', ['as' => 'faq.html', 'uses' => 'PostController@faq']);
