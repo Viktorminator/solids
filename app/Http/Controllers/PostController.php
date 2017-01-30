@@ -24,6 +24,12 @@ class PostController extends Controller
         return view('about-company')->with(compact('post','list'));
     }
 
+    public function aboutpages($alias) {
+        $post = Posts::whereAlias($alias)->first();
+        $list = Posts::whereParent('71')->get();
+        return view('about-company')->with(compact('post','list'));
+    }
+
     public function articles() {
         return view('articles');
     }
