@@ -11,6 +11,16 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function aliasToView($alias) {
+        $post = Posts::whereAlias($alias)->first(['template_id']);
+        $template_id = $post->template_id;
+
+
+        $post = Posts::whereAlias($alias)->first();
+        $list = Posts::whereParent('71')->get();
+
+        return view($template_id)->with(compact('post','list'));
+    }
     //
     public function index() {
         $post = Posts::whereAlias('index.html')->first();
@@ -18,6 +28,7 @@ class PostController extends Controller
         //return view('index');
     }
 
+    /* 'dostizheniya.html', 'komanda.html', 'kontaktyi.html', 'rekvizityi.html','smi-o-nas.html'*/
     public function about() {
         $post = Posts::whereAlias('o-kompanii.html')->first();
         $list = Posts::whereParent('71')->get();
