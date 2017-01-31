@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-        @if($post->parent == NULL)
+        @if(is_null($post->parent))
             <h1 class="big">{{ $post->pagetitle }}</h1>
         @else
             <h1 class="big">О компании</h1>
