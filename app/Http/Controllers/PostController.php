@@ -19,11 +19,13 @@ class PostController extends Controller
         $post = Posts::whereAlias($alias)->first();
         // get sidebar list
         $list = Posts::whereParent('71')->get();
+        // get secondary nav list with row sort
+        $snav = Posts::whereIn('id', [71,122,69,27])->orderByRaw('FIELD(id,71,122,69,27)')->get();
         // get parent alias
         $parent = Posts::whereAlias($alias)->first(['parent']);
         $parent_alias = Posts::whereId($parent->parent)->first(['alias']);
         // send to view all the data
-        return view($template_id)->with(compact('post','list','parent_alias'));
+        return view($template_id)->with(compact('post','list','parent_alias','snav'));
     }
     //
     public function index() {
