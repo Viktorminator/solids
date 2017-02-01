@@ -20,14 +20,11 @@
     <li><a href="pozvonite-mne.html">Позвоните мне</a></li>
 </ul>
 <ul class="navigation-primary">
-    <li><a href="buhgalterskyi-autsorsing"><img src="css/engraving-25-accounting.gif" alt="" />Бухгалтерский аутсорсинг</a></li>
-
-
-    <li><a href="kadrovoe-deloproizvodstvo.html"><img src="css/engraving-25-recordskeeping.gif" alt="" />Кадровое делопроизводство</a></li>
-
-
-    <li><a href="yuridicheskie-uslugi.html"><img src="css/engraving-25-legal.gif" alt="" />Юридические услуги</a></li>
-
-
-    <li><a href="konsalting.html"><img src="css/engraving-25-consulting.gif" alt="" />Стратегический консалтинг</a></li>
+    @foreach($pnav as $item)
+        @if(Request::segment(1) == $item->alias)
+            <li class="selected"><img src="{{ $item->image }}" alt="" /><strong>{{ $item->pagetitle }}</strong><div class="angle"></div></li>
+        @else
+            <li><a href="{{ $item->alias }}" title="{{ $item->title }}"><img src="{{ $item->image }}" alt="" />{{ $item->pagetitle }}</a></li>
+        @endif
+    @endforeach
 </ul>
