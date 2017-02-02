@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PostFormRequest;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostController extends BaseController
 {
     public function aliasToView($alias) {
         $post = Posts::whereAlias($alias)->first(['template_id']);
@@ -19,10 +19,7 @@ class PostController extends Controller
         $post = Posts::whereAlias($alias)->first();
         // get sidebar list
         $list = Posts::whereParent('71')->get();
-        // get primary nav list with row sort
-        $pnav = Posts::whereIn('id', [164,42,149,49])->orderByRaw('FIELD(id,164,42,149,49)')->get();
-        // get secondary nav list with row sort
-        $snav = Posts::whereIn('id', [71,122,69,27])->orderByRaw('FIELD(id,71,122,69,27)')->get();
+
         // get parent alias
         $parent = Posts::whereAlias($alias)->first(['parent']);
         $parent_alias = Posts::whereId($parent->parent)->first(['alias']);
