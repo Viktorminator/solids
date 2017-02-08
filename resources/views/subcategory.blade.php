@@ -10,5 +10,6 @@
             @endif
         @endforeach
     </ul>
+    <h1>{{ $post->pagetitle }}</h1>
     {!!  $post->content !!}
 @stop
