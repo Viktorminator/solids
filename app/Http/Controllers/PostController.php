@@ -12,19 +12,20 @@ use Illuminate\Http\Request;
 class PostController extends BaseController
 {
     public function aliasToView($alias) {
-        $post = Posts::whereAlias($alias)->first(['template_id']);
-        $template_id = $post->template_id;
-
         // get Post all fields (content, pagetitle, etc...)
         $post = Posts::whereAlias($alias)->first();
-        // get sidebar list
-        $list = Posts::whereParent('71')->get();
-
+        $template_id = $post->template_id;
+        $post_id = $post->id;
+        // get sidebar list for category
+        $list = Posts::whereParent($post_id)->get();
         // get parent alias
-        $parent = Posts::whereAlias($alias)->first(['parent']);
-        $parent_alias = Posts::whereId($parent->parent)->first(['alias']);
+        $parent_id = Posts::whereAlias($alias)->first(['parent']);
+        $parent_alias = Posts::whereId($parent_id->parent)->first(['alias']);
+        // get sidebar list for subcategory
+        $sublist = Posts::whereParent($parent_id->parent)->get();
+        $parent = Posts::whereId($parent_id->parent)->first();
         // send to view all the data
-        return view($template_id)->with(compact('post','list','parent_alias','pnav','snav'));
+        return view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
     }
     //
     public function index() {

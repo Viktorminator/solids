@@ -12,7 +12,7 @@ class BaseController extends Controller
     function __construct()
     {
         // get primary nav list with row sort
-        $this->pnav = Posts::whereIn('id', [164,42,149,49])->orderByRaw('FIELD(id,164,42,149,42)')->get();
+        $this->pnav = Posts::whereIn('id', [164,42,149,49])->orderByRaw('FIELD(id,164,42,149,49)')->get();
         // get secondary nav list with row sort
         $this->snav = Posts::whereIn('id', [71,122,69,27])->orderByRaw('FIELD(id,71,122,69,27)')->get();
         // share data for navigation
