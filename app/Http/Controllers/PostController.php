@@ -24,8 +24,19 @@ class PostController extends BaseController
         // get sidebar list for subcategory
         $sublist = Posts::whereParent($parent_id->parent)->get();
         $parent = Posts::whereId($parent_id->parent)->first();
+        // get articles list for articles page
+        $posts = Posts::whereParent($post_id)->get();
+
+        switch($template_id) {
+            case 'articles':
+                $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
+                break;
+            default:
+                $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
+                break;
+        }
         // send to view all the data
-        return view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
+        return $output;
     }
     //
     public function index() {
