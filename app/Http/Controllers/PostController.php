@@ -25,7 +25,7 @@ class PostController extends BaseController
         $sublist = Posts::whereParent($parent_id->parent)->get();
         $parent = Posts::whereId($parent_id->parent)->first();
         // get articles list for articles page
-        $posts = Posts::whereParent($post_id)->get();
+        $posts = Posts::whereParent($post_id)->paginate(8);
 
         switch($template_id) {
             case 'articles':

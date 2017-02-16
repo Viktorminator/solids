@@ -9,7 +9,7 @@ class Posts extends Model {
     // возвращает сущность пользователя, который является автором этого поста
     public function author()
     {
-        return $this->belongsTo('App\Authors','author_id','author_name');
+        return $this->hasOne('App\Authors','id','author_id');
     }
 
     public function parent() {
