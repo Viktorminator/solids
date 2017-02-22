@@ -5,7 +5,7 @@
             <div class="col-1">
                 @foreach($posts as $item)
                     <h3><a href="{{ $item->alias }}" title="{{ $item->pagetitle }}">{{ $item->pagetitle }}</a></h3>
-                    <p class="desc">{{ $item->published }}, {{ $item->author->author_name }}</p>
+                    <p class="desc">{{ \Carbon\Carbon::createFromFormat('U', $item->published)->formatLocalized('%d %B %Y') }}, {{ $item->author->author_name }}</p>
                     <p class="mini">{!! $item->description !!}</p>
                     @if($loop->index == 3)
                         </div><div class="col-2">

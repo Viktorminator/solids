@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Posts;
-use App\User;
 use Redirect;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\PostFormRequest;
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
 class PostController extends BaseController
 {
     public function aliasToView($alias) {
@@ -26,6 +24,8 @@ class PostController extends BaseController
         $parent = Posts::whereId($parent_id->parent)->first();
         // get articles list for articles page
         $posts = Posts::whereParent($post_id)->paginate(8);
+
+        setlocale(LC_ALL, 'ru_RU.UTF-8');
 
         switch($template_id) {
             case 'articles':
