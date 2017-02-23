@@ -31,6 +31,9 @@ class PostController extends BaseController
             case 'articles':
                 $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
                 break;
+            case 'news':
+                $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
+                break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
                 break;
