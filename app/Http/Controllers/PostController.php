@@ -25,7 +25,7 @@ class PostController extends BaseController
         // get articles list for articles page
         $posts = Posts::whereParent($post_id)->paginate(8);
 
-        setlocale(LC_ALL, 'ru_RU.UTF-8');
+
 
         switch($template_id) {
             case 'articles':
