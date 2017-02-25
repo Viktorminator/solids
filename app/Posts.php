@@ -5,8 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 class Posts extends Model {
     // запрещает изменение колонок
     protected $guarded = [];
-    // время в UTC
-    protected $dateFormat = 'U';
+
+
     // у постов множество комментариев
     // возвращает сущность пользователя, который является автором этого поста
     public function author()
