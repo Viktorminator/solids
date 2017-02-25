@@ -6,7 +6,8 @@ use App\Posts;
 use Redirect;
 use App\Http\Requests\PostFormRequest;
 use Illuminate\Http\Request;
-use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+
 class PostController extends BaseController
 {
     public function aliasToView($alias) {
@@ -25,7 +26,8 @@ class PostController extends BaseController
         // get articles list for articles page
         $posts = Posts::whereParent($post_id)->paginate(8);
 
-
+        $news = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
+        dd($news);
 
         switch($template_id) {
             case 'articles':
