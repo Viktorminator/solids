@@ -13,13 +13,13 @@
 
 Route::get('/', 'PostController@index');
 
-Route::get('/parse', 'ParseController@index');
+// Route::get('/parse', 'ParseController@index');
 Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
 
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
 
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
-
+Route::get('{alias}/', ['uses' => 'PostController@archive'])->where('alias','201[3-7]');
 Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostController@about']);
 
 

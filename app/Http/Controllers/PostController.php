@@ -26,15 +26,16 @@ class PostController extends BaseController
         // get articles list for articles page
         $posts = Posts::whereParent($post_id)->paginate(8);
 
-        $news = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
-        dd($news);
+        // get years of Posts for making sidebar pagination by Year
+        $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
+
 
         switch($template_id) {
             case 'articles':
                 $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
                 break;
             case 'news':
-                $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
+                $output = view($template_id)->with(compact('post','list','pnav','snav','posts','years'));
                 break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
@@ -43,7 +44,12 @@ class PostController extends BaseController
         // send to view all the data
         return $output;
     }
-    //
+
+    public function archive() {
+        return 'hello!';
+    }
+
+
     public function index() {
         $post = Posts::whereAlias('index.html')->first();
         return view('index')->with('post', $post);
