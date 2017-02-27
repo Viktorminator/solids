@@ -1,9 +1,16 @@
 @extends('layout')
 @section('content')
 <h1 class="big">Новости и события</h1>
+@if(!empty($year))
+    <h1>{{ $year }} год</h1>
+@endif
 <ul class="navigation-side">
-    @foreach($years as $year)
-        <li><a href="{{ $year->Year }}/">{{ $year->Year }}</a></li>
+    @foreach($years as $item)
+        @if($item->Year == $year)
+            <li class="selected"><strong>{{ $item->Year }}</strong><div class="angle"></div></li>
+        @else
+            <li><a href="{{ $item->Year }}/">{{ $item->Year }}</a></li>
+        @endif
     @endforeach
 </ul>
     @foreach($posts as $item)

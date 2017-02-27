@@ -29,13 +29,13 @@ class PostController extends BaseController
         // get years of Posts for making sidebar pagination by Year
         $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
 
-
         switch($template_id) {
             case 'articles':
                 $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
                 break;
             case 'news':
-                $output = view($template_id)->with(compact('post','list','pnav','snav','posts','years'));
+                $year = '';
+                $output = view($template_id)->with(compact('post','list','pnav','snav','posts','year','years'));
                 break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
@@ -45,8 +45,17 @@ class PostController extends BaseController
         return $output;
     }
 
-    public function archive() {
-        return 'hello!';
+    public function archive($year) {
+        // get archive page for specific year
+        $parent_alias = 'novosti.html';
+        // get parent object field for displaying for all the posts (title, desc, etc ... )
+        $post = Posts::whereAlias($parent_alias)->first();
+        $template_id = 'news';
+        // get years of Posts for making sidebar pagination by Year
+        $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
+        $posts = DB::table('posts')->whereYear('published',$year)->get();
+
+        return view($template_id)->with(compact('post','list','pnav','snav','posts','year','years'));
     }
 
 
