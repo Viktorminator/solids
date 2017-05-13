@@ -12,4 +12,5 @@
     </ul>
     <h1>{{ $post->pagetitle }}</h1>
     {!!  $post->content !!}
+    @yield('layouts.form')
 @stop

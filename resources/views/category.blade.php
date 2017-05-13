@@ -7,4 +7,5 @@
         @endforeach
     </ul>
     {!!  $post->content !!}
+    @include('layouts.form')
 @stop

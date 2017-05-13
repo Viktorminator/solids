@@ -29,7 +29,7 @@
         </ul>
         <hr />
         <div class="copyrights">
-            <p>©&nbsp;2012—2014<br> ООО&nbsp;«Солидс»</p>
+            <p>©&nbsp;2012—2017<br> ООО&nbsp;«Солидс»</p>
             <p>Дизайн&nbsp;— <a href="http://www.studiotitanium.ru">Студия&nbsp;Титаниум</a></p>
         </div>
 
