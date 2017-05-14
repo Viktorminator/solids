@@ -27,7 +27,7 @@ class PostController extends BaseController
         $posts = Posts::whereParent($post_id)->paginate(8);
 
         // get years of Posts for making sidebar pagination by Year
-        $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
+        $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->orderBy('Year', 'desc')->groupBy('Year')->get();
 
         switch($template_id) {
             case 'articles':
@@ -36,6 +36,10 @@ class PostController extends BaseController
             case 'news':
                 $year = '';
                 $output = view($template_id)->with(compact('post','list','pnav','snav','posts','year','years'));
+                break;
+            case 'news-article':
+                $year = '';
+                $output = view($template_id)->with(compact('post', 'list', 'pnav','snav','posts','year', 'years'));
                 break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));

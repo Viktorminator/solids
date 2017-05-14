@@ -14,7 +14,7 @@
 Route::get('/', 'PostController@index');
 
 // Route::get('/parse', 'ParseController@index');
-Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
+// Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
 
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
 
