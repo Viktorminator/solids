@@ -15,6 +15,7 @@ class PostController extends BaseController
         $post = Posts::whereAlias($alias)->first();
         $template_id = $post->template_id;
         $post_id = $post->id;
+        $year = date("Y", strtotime($post->published));
         // get sidebar list for category
         $list = Posts::whereParent($post_id)->get();
         // get parent alias
@@ -38,8 +39,7 @@ class PostController extends BaseController
                 $output = view($template_id)->with(compact('post','list','pnav','snav','posts','year','years'));
                 break;
             case 'news-article':
-                $year = '';
-                $output = view($template_id)->with(compact('post', 'list', 'pnav','snav','posts','year', 'years'));
+                $output = view($template_id)->with(compact('post', 'list', 'pnav','snav','year', 'years'));
                 break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
@@ -56,7 +56,7 @@ class PostController extends BaseController
         $post = Posts::whereAlias($parent_alias)->first();
         $template_id = 'news';
         // get years of Posts for making sidebar pagination by Year
-        $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->groupBy('Year')->get();
+        $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->orderBy('Year', 'desc')->groupBy('Year')->get();
         $posts = DB::table('posts')->whereYear('published',$year)->get();
 
         return view($template_id)->with(compact('post','list','pnav','snav','posts','year','years'));

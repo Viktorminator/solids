@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "26261cb4716ca427964bc1400d2c7c5a",
-    "content-hash": "d43211b63b5cbfe87be4856db4397b08",
+    "hash": "564e41321d8a6f529c87c9f989779613",
+    "content-hash": "92c5ccf437e4fbb34939253cf1ffbdff",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -214,58 +214,6 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
-        },
-        {
-            "name": "duzun/hquery",
-            "version": "1.5.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/duzun/hQuery.php.git",
-                "reference": "37460dc34affccdff59d33d5414934d3244cd19b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/duzun/hQuery.php/zipball/37460dc34affccdff59d33d5414934d3244cd19b",
-                "reference": "37460dc34affccdff59d33d5414934d3244cd19b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "hquery.php"
-                ],
-                "psr-4": {
-                    "duzun\\": "psr-4"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dumitru Uzun",
-                    "email": "contact@duzun.me",
-                    "homepage": "https://DUzun.Me",
-                    "role": "Developer"
-                }
-            ],
-            "description": "An extremely fast web scraper that parses megabytes of HTML in a blink of an eye. No dependencies. PHP5+",
-            "homepage": "https://duzun.me/playground/hquery",
-            "keywords": [
-                "crawling",
-                "html",
-                "php",
-                "scraper",
-                "scraping",
-                "web",
-                "xhtml",
-                "xml"
-            ],
-            "time": "2017-01-03 11:32:14"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -683,49 +631,6 @@
                 "debugbar"
             ],
             "time": "2017-01-05 08:46:19"
-        },
-        {
-            "name": "miroc/laravel-adminer",
-            "version": "4.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/miroc/Laravel-Adminer.git",
-                "reference": "26210ebeb08b2df55efe3787d97e2723cfc14b71"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/miroc/Laravel-Adminer/zipball/26210ebeb08b2df55efe3787d97e2723cfc14b71",
-                "reference": "26210ebeb08b2df55efe3787d97e2723cfc14b71",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "5.*",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Miroc\\LaravelAdminer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Miroslav Svitok",
-                    "email": "mirosvitok@gmail.com"
-                }
-            ],
-            "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5",
-            "keywords": [
-                "adminer",
-                "database",
-                "laravel5",
-                "management"
-            ],
-            "time": "2016-12-10 23:04:34"
         },
         {
             "name": "monolog/monolog",
@@ -2144,6 +2049,58 @@
             "time": "2015-06-14 21:17:01"
         },
         {
+            "name": "duzun/hquery",
+            "version": "1.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/duzun/hQuery.php.git",
+                "reference": "37460dc34affccdff59d33d5414934d3244cd19b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/duzun/hQuery.php/zipball/37460dc34affccdff59d33d5414934d3244cd19b",
+                "reference": "37460dc34affccdff59d33d5414934d3244cd19b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "hquery.php"
+                ],
+                "psr-4": {
+                    "duzun\\": "psr-4"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dumitru Uzun",
+                    "email": "contact@duzun.me",
+                    "homepage": "https://DUzun.Me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An extremely fast web scraper that parses megabytes of HTML in a blink of an eye. No dependencies. PHP5+",
+            "homepage": "https://duzun.me/playground/hquery",
+            "keywords": [
+                "crawling",
+                "html",
+                "php",
+                "scraper",
+                "scraping",
+                "web",
+                "xhtml",
+                "xml"
+            ],
+            "time": "2017-01-03 11:32:14"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "v1.6.0",
             "source": {
@@ -2235,6 +2192,49 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "miroc/laravel-adminer",
+            "version": "4.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miroc/Laravel-Adminer.git",
+                "reference": "26210ebeb08b2df55efe3787d97e2723cfc14b71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miroc/Laravel-Adminer/zipball/26210ebeb08b2df55efe3787d97e2723cfc14b71",
+                "reference": "26210ebeb08b2df55efe3787d97e2723cfc14b71",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Miroc\\LaravelAdminer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miroslav Svitok",
+                    "email": "mirosvitok@gmail.com"
+                }
+            ],
+            "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5",
+            "keywords": [
+                "adminer",
+                "database",
+                "laravel5",
+                "management"
+            ],
+            "time": "2016-12-10 23:04:34"
         },
         {
             "name": "mockery/mockery",

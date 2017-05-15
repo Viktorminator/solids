@@ -6,9 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "duzun/hquery": "^1.5",
-        "laravel/framework": "5.3.*",
-        "miroc/laravel-adminer": "^4.2"
+        "barryvdh/laravel-debugbar": "^2.3",
+        "laravel/framework": "5.3.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
