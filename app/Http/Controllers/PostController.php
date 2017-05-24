@@ -7,6 +7,7 @@ use Redirect;
 use App\Http\Requests\PostFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Helpers;
 
 class PostController extends BaseController
 {
@@ -92,6 +93,13 @@ class PostController extends BaseController
 
     public function faq() {
         return view('faq');
+    }
+
+    public function hello()
+    {
+        return view('helloworld', array(
+            'page_title' => Helpers::hello_world(' Default name')
+        ));
     }
 
     public function create(Request $request)

@@ -8,6 +8,7 @@ use App\Posts;
 class BaseController extends Controller
 {
     protected $snav, $pnav;
+
     // put all the shared data into function __construct
     function __construct()
     {

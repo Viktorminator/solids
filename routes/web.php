@@ -17,6 +17,7 @@ Route::get('/', 'PostController@index');
 // Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
 
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
+Route::get('/hello-world.html', ['as' => 'hello-world.html', 'uses' => 'PostController@hello']);
 
 Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[3-7]');
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
