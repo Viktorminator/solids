@@ -17,7 +17,6 @@ Route::get('/', 'PostController@index');
 // Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
 
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
-Route::get('/hello-world.html', ['as' => 'hello-world.html', 'uses' => 'PostController@hello']);
 
 Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[3-7]');
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
@@ -27,7 +26,6 @@ Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostContro
 
 Route::get('/stati.html', ['as' => 'stati.html', 'uses' => 'PostController@articles']);
 Route::get('/novosti.html', ['as' => 'novosti.html', 'uses' => 'PostController@news']);
-Route::get('/faq.html', ['as' => 'faq.html', 'uses' => 'PostController@faq']);
 // user check
 Route::group(['middleware' => ['auth']], function(){
     // new form show

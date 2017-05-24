@@ -91,9 +91,6 @@ class PostController extends BaseController
         return view('news');
     }
 
-    public function faq() {
-        return view('faq');
-    }
 
     public function hello()
     {

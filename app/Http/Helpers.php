@@ -7,19 +7,15 @@
  */
 class Helpers
 {
-    public static function hello_world($name)
+
+    public static function getRusDate($date, $format = 'd m Y')
     {
-        return 'Hello World ' . $name;
-    }
-    public static function getRusDate($datetime) {
-        $yy = (int) substr($datetime,0,4);
-        $mm = (int) substr($datetime,5,2);
-        $dd = (int) substr($datetime,8,2);
+        $month =  array ('', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря');
 
-        $hours = substr($datetime,11,5);
+        $datetime = strtotime($date);
+        $format = str_replace('m', '%s', $format);
+        $format = sprintf($format, $month[date('n', $datetime)]);
 
-        $month =  array ('января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря');
-
-        return ($dd > 0 ? $dd . " " : '') . $month[$mm - 1]." ".$yy." г.";
+        return date($format, $datetime);
     }
 }

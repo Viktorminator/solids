@@ -15,6 +15,6 @@
     </ul>
 
     <h1>{{ $post->pagetitle }}</h1>
-    <p class="desc">{{ Carbon\Carbon::parse($post->published)->formatLocalized('%d %B') }}</p>
+    <p class="desc">{{ Helpers::getRusDate($post->published, 'd m') }}</p>
     {!!  $post->content !!}
 @stop
