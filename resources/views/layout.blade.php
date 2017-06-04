@@ -7,14 +7,19 @@
     <title>Бухгалтерское обслуживание , юридические услуги , кадровое делопроизводство, аудит и консалтинг от Солидс</title>
     <meta name='description' content='{{ $post->description | 'Услуги консалтинговой компании Солидс: бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит, консалтинг' }}' />
     <meta name='keywords' content='{{ $post->keywords }}' />
-    <link rel="canonical" href="http://solids.ru/" />
+    <link rel="canonical" href="http://solids.dev/" />
     <link rel='shortcut icon' href="/favicon.ico" type="ico" />
     <link rel="author" href="humans.txt" />
     <link rel='apple-touch-icon-precomposed' href="/css/i/apple-touch-icon-57x57-precomposed.png" />
     <link rel='apple-touch-icon-precomposed' sizes="72x72" href="/css/i/apple-touch-icon-72x72-precomposed.png" />
     <link rel='apple-touch-icon-precomposed' sizes="114x114" href="/css/i/apple-touch-icon-114x114-precomposed.png" />
     <link rel='stylesheet' href="/css/common.css" type="text/css" />
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("myform").submit();
+        }
+    </script>
 </head>
 <body class="color-scheme-1">
 <div id="layout">
