@@ -21,7 +21,11 @@
 
 <ul class="navigation-phone">
     <li class="phone"><span class="ya-phone">+7 (495) 698-97-97</span></li>
-    <li><a href="pozvonite-mne.html">Позвоните мне</a></li>
+    @if(Request::segment(1) == 'pozvonite-mne.html')
+        <li class="selected"><strong>Позвоните мне</strong><div class="angle"></div></li>
+    @else
+        <li><a href="pozvonite-mne.html">Позвоните мне</a></li>
+    @endif
 </ul>
 <ul class="navigation-primary">
     @foreach($pnav as $item)

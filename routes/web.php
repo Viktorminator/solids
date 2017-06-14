@@ -17,12 +17,13 @@ Route::get('/', 'PostController@index');
 // Route::any('adminer', '\Miroc\LaravelAdminer\AdminerAutologinController@index');
 
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
+Route::get('/pozvonite-mne.html', [ 'as' => '/pozvonite-mne.html','uses' => 'PostController@callme']);
 
 Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[3-7]');
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
 Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostController@about']);
 
-
+Route::get('/sendmail', ['uses' => 'PostController@sendmail']);
 
 Route::get('/stati.html', ['as' => 'stati.html', 'uses' => 'PostController@articles']);
 Route::get('/novosti.html', ['as' => 'novosti.html', 'uses' => 'PostController@news']);

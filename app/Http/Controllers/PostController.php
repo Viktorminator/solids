@@ -11,6 +11,7 @@ use Helpers;
 
 class PostController extends BaseController
 {
+
     public function aliasToView($alias) {
         // get Post all fields (content, pagetitle, etc...)
         $post = Posts::whereAlias($alias)->first();
@@ -30,7 +31,8 @@ class PostController extends BaseController
 
         // get years of Posts for making sidebar pagination by Year
         $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->orderBy('Year', 'desc')->groupBy('Year')->get();
-
+        // get Authors name of post
+        $author_name = $post->author->author_name;
         switch($template_id) {
             case 'articles':
                 $output = view($template_id)->with(compact('post','list','pnav','snav','posts'));
@@ -41,6 +43,9 @@ class PostController extends BaseController
                 break;
             case 'news-article':
                 $output = view($template_id)->with(compact('post', 'list', 'pnav','snav','year', 'years'));
+                break;
+            case 'faq-article':
+                $output = view($template_id)->with(compact('post','pnav','snav', 'parent', 'author_name'));
                 break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
@@ -91,7 +96,27 @@ class PostController extends BaseController
         return view('news');
     }
 
+    public function sendmail($request) {
+        \Mail::send('emails.contact',
+            array(
+                'name' => $request->get('form-person'),
+                'phone' => $request->get('form-phone'),
+                'email' => $request->get('form-email'),
+                'organization' => $request->get('form-company'),
+                'user_message' => $request->get('form-question')
+            ), function($message)
+            {
+                $message->from('info@solids.dev');
+                $message->to('viktorminator@gmail.com', 'Admin')->subject('Письмо с Солидс');
+            });
 
+        return \Redirect::route('contact')->with('message', 'Спасибо за Ваше сообщение! Скоро с Вами свяжется менеджер компании');
+    }
+    // Call me back! request
+    public function callme() {
+        $post = Posts::whereAlias('index.html')->first();
+        return view('callme')->with(['post' => $post ]);
+    }
     public function hello()
     {
         return view('helloworld', array(
