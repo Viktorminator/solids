@@ -17,7 +17,7 @@
     @endforeach
 </ul>
 
-<div class="logo"><a href="http://solids.dev/"></a></div>
+<div class="logo"><a href="http://solids.ru/"></a></div>
 
 <ul class="navigation-phone">
     <li class="phone"><span class="ya-phone">+7 (495) 698-97-97</span></li>

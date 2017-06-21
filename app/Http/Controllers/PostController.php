@@ -71,8 +71,12 @@ class PostController extends BaseController
 
     public function index() {
         $post = Posts::whereAlias('index.html')->first();
-        return view('index')->with('post', $post);
-        //return view('index');
+        // get last article, news and question
+        $last_article = Posts::whereTemplateId('article')->orderBy('published', 'desc')->first();
+        $author_name = $last_article->author->author_name;
+        $last_news = Posts::whereTemplateId('news-article')->orderBy('published', 'desc')->first();
+        $last_question = Posts::whereTemplateId('faq-article')->orderBy('published', 'desc')->first();
+        return view('index')->with(compact('post', 'last_article','last_news', 'last_question','author_name'));
     }
 
     /* 'dostizheniya.html', 'komanda.html', 'kontaktyi.html', 'rekvizityi.html','smi-o-nas.html'*/
