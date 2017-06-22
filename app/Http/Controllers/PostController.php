@@ -47,9 +47,13 @@ class PostController extends BaseController
             case 'faq-article':
                 $output = view($template_id)->with(compact('post','pnav','snav', 'parent', 'author_name'));
                 break;
-            case 'faq-subcategory';
+            case 'faq-subcategory':
                 $sublist = Posts::where('template_id','faq-subcategory')->get();
-                //dd($categories);
+                $output = view($template_id)->with(compact('post','sublist','posts'));
+                break;
+            case 'faq':
+                $sublist = Posts::where('template_id','faq-subcategory')->get();
+                $posts = Posts::whereIn('parent', [165,166,167])->orderBy('published', 'desc')->paginate(8);
                 $output = view($template_id)->with(compact('post','sublist','posts'));
                 break;
             default:

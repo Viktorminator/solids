@@ -2,31 +2,20 @@
 @section('content')
 <h1 class="big">Ответы на вопросы</h1>
 <h1>Новые ответы</h1>
-<ul class="navigation-side"><li><a href="pravovyie-voprosyi/">Правовые вопросы</a></li>
-
-    <li><a href="buxgalterskij-uchet/">Бухгалтерский учет</a></li>
-
-    <li><a href="kadrovoe-deloproizvodstvo/">Кадровое делопроизводство</a></li>
-
+<ul class="navigation-side">
+    @foreach($sublist as $item)
+        @if($item->alias == $post->alias)
+            <li class="selected"><strong>{{ $item->title }}</strong><div class="angle"></div></li>
+        @else
+            <li><a href="{{ $item->alias }}" title="{{ $item->title }}">{{ $item->title }}</a></li>
+        @endif
+    @endforeach
 </ul>
-<h3><a href="kak-pravilno-ukazyivat-mesto-nahozhdeniya-organizacii.html" title="Подскажите, как с сентября 2014 г. нужно в уставе правильно указывать место нахождения организации?">Подскажите, как с сентября 2014 г. нужно в уставе правильно указывать место нахождения организации?</a></h3>
-<p class="desc">Светлана Подругина</p>
-<p class="mini"></p>
-<h3><a href="moya-firma-byila-zaregistrirovana-kak-odo.html" title="Моя фирма была зарегистрирована как ОДО. С 1 сентября ее упразднили. Как теперь менять наименование и учредительные документы?">Моя фирма была зарегистрирована как ОДО. С 1 сентября ее упразднили. Как теперь менять наименование и учредительные документы?</a></h3>
-<p class="desc">Ольга Киреева</p>
-<p class="mini"></p>
-<h3><a href="pravilno-propisat-operacii-v-buhuchyote.html" title="Каким образом в бухучете правильно прописать операции, которые касаются продажи некоторой доли уставного капитала?">Каким образом в бухучете правильно прописать операции, которые касаются продажи некоторой доли уставного капитала?</a></h3>
-<p class="desc">Ирина Чепурова</p>
-<p class="mini"></p>
-<h3><a href="rezerv-po-somnitelnyim-dolgam.html" title="Подскажите, наша компания имеет право формировать в бухучете и налоговой отчетности определенный резерв по сомнительным долгам, если мы работаем на основной системе налогообложения и терпим убытки?">Подскажите, наша компания имеет право формировать в бухучете и налоговой отчетности определенный резерв по сомнительным долгам, если мы работаем на основной системе налогообложения и терпим убытки?</a></h3>
-<p class="desc">Алла Андреева</p>
-<p class="mini"></p>
-<h3><a href="myi-ne-vyistavili-schet-fakturu-na-avans.html" title="Мы не выставили счет-фактуру на аванс. Грозит ли нам штраф?">Мы не выставили счет-фактуру на аванс. Грозит ли нам штраф?</a></h3>
-<p class="desc">Ольга Киреева</p>
-<p class="mini"></p>
+@foreach($posts as $item)
+    <h3><a href="{{ $item->alias }}" title="{{ $item->title }}">{{ $item->pagetitle }}</a></h3>
+    <p class="desc">{{ $item->author->author_name }}</p>
+@endforeach
 
-<!--ul class="pagination">
-
-</ul-->
+{{ $posts->links() }}
 
 @stop
