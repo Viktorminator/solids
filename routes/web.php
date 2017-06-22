@@ -20,6 +20,7 @@ Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // auth
 Route::get('/pozvonite-mne.html', [ 'as' => '/pozvonite-mne.html','uses' => 'PostController@callme']);
 
 Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[3-7]');
+Route::get('/{alias}/', ['uses' => 'PostController@aliasToView']);
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
 Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostController@about']);
 

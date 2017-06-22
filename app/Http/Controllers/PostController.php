@@ -47,6 +47,9 @@ class PostController extends BaseController
             case 'faq-article':
                 $output = view($template_id)->with(compact('post','pnav','snav', 'parent', 'author_name'));
                 break;
+            case 'faq-category';
+                $output = view($template_id)->with(compact('post','pnav','snav'));
+                break;
             default:
                 $output = view($template_id)->with(compact('post','list','sublist','parent_alias','pnav','snav','parent'));
                 break;
