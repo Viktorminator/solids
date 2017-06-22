@@ -3,7 +3,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="norton-safeweb-site-verification" content="8mnr2vblm6vez-2t6bk30anrpymcg8iekk8ik0gie992dbexv5fllcucloxa1abu0rrpgj58xlueulusvlpsghykt5demxxenx4cl0in1qztqkebebegt8z7onnqii5x" />
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=9" />
-    <base href="http://solids.ru/" />
+    <base href="/" />
     <title>{{ $post->title, 'Бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит и консалтинг от Солидс' }}</title>
     <meta name='description' content='{{ $post->description , 'Услуги консалтинговой компании Солидс: бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит, консалтинг' }}' />
     <meta name='keywords' content='{{ $post->keywords, 'Бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит, консалтинг' }}' />
