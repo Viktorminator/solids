@@ -27,7 +27,7 @@ class PostController extends BaseController
         $sublist = Posts::whereParent($parent_id->parent)->get();
         $parent = Posts::whereId($parent_id->parent)->first();
         // get articles list for articles page
-        $posts = Posts::whereParent($post_id)->paginate(8);
+        $posts = Posts::whereParent($post_id)->orderBy('published', 'desc')->paginate(8);
 
         // get years of Posts for making sidebar pagination by Year
         $years = DB::table('posts')->select(DB::raw('YEAR(published) as Year'))->orderBy('Year', 'desc')->groupBy('Year')->get();
