@@ -61,9 +61,9 @@
            </span>
          </p>
         </p-->
-        <form action="search/" class="search" method="get">
+        <form action="/search" class="search" method="get">
 
-            <input class="keywords" type="text" name="query" value="поиск" onclick="if (this.value == 'поиск') {this.value = '';}" onblur="if (this.value == '') {this.value = 'поиск';}"/>
+            <input class="keywords" type="text" name="q" value="поиск" onclick="if (this.value == 'поиск') {this.value = '';}" onblur="if (this.value == '') {this.value = 'поиск';}"/>
             <input class="go" type="image" value="Искать!" src="/css/i/search.gif"/>
 
         </form>
@@ -76,8 +76,5 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988764364/?value=0&amp;label=ni2dCPyZiAUQzLG91wM&amp;guid=ON&amp;script=0"/>
     </div>
 </noscript>
-<script>
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-        ':35729/livereload.js?snipver=1"></' + 'script>')
-</script>
+
 </body></html>

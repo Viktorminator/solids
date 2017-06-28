@@ -1,8 +1,11 @@
 @extends('layout')
 @section('content')
 <h1 class="big">Новости и события</h1>
+
 @if(!empty($year))
     <h1>{{ $year }} год</h1>
+    @else
+    <h1>Последние новости</h1>
 @endif
 <ul class="navigation-side">
     @foreach($years as $item)
