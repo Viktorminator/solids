@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dadcc20cef72cc374c468c0f2036a8e3",
-    "content-hash": "b1e3da47b047522e22b70b6f74564a96",
+    "hash": "fb4f291d127f58947acc0ebe95aa25a7",
+    "content-hash": "484c70849586e4872851440fc0de8400",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -68,6 +68,48 @@
                 "webprofiler"
             ],
             "time": "2017-06-01 17:46:08"
+        },
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "3.0.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "7c4c87b366ee3a17860e9371f339e7158d560caf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/7c4c87b366ee3a17860e9371f339e7158d560caf",
+                "reference": "7c4c87b366ee3a17860e9371f339e7158d560caf",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.10"
+            },
+            "suggest": {
+                "ablunier/laravel-lang-installer": "Command for easily add languages to a Laravel project",
+                "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2017-06-09 08:16:13"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -309,54 +351,6 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
-        },
-        {
-            "name": "jan-drda/laravel-google-custom-search-engine",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jdrda/laravel-google-custom-search-engine.git",
-                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jdrda/laravel-google-custom-search-engine/zipball/d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
-                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": ">=5.0.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "JanDrda\\LaravelGoogleCustomSearchEngine": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Drda",
-                    "email": "jdrda@outlook.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Laravel package to get Google Custom Search results from Google Custom Search Engine API for both free and paid version.",
-            "homepage": "https://github.com/jdrda/laravel-google-custom-search-engine",
-            "keywords": [
-                "custom",
-                "engine",
-                "free",
-                "google",
-                "laravel",
-                "paid",
-                "search"
-            ],
-            "time": "2016-12-14 10:55:51"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -2259,6 +2253,54 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "jan-drda/laravel-google-custom-search-engine",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdrda/laravel-google-custom-search-engine.git",
+                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdrda/laravel-google-custom-search-engine/zipball/d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
+                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JanDrda\\LaravelGoogleCustomSearchEngine": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Drda",
+                    "email": "jdrda@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package to get Google Custom Search results from Google Custom Search Engine API for both free and paid version.",
+            "homepage": "https://github.com/jdrda/laravel-google-custom-search-engine",
+            "keywords": [
+                "custom",
+                "engine",
+                "free",
+                "google",
+                "laravel",
+                "paid",
+                "search"
+            ],
+            "time": "2016-12-14 10:55:51"
         },
         {
             "name": "mockery/mockery",

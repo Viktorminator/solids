@@ -7,7 +7,8 @@
     <title>{{ $post->title, 'Бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит и консалтинг от Солидс' }}</title>
     <meta name='description' content='{{ $post->description , 'Услуги консалтинговой компании Солидс: бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит, консалтинг' }}' />
     <meta name='keywords' content='{{ $post->keywords, 'Бухгалтерское обслуживание, юридические услуги, кадровое делопроизводство, аудит, консалтинг' }}' />
-    <link rel="canonical" href="http://solids.ru/" />
+    <link rel="canonical" href="/" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel='shortcut icon' href="/favicon.ico" type="ico" />
     <link rel="author" href="humans.txt" />
     <link rel='apple-touch-icon-precomposed' href="/css/i/apple-touch-icon-57x57-precomposed.png" />

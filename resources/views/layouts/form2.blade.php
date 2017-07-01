@@ -2,7 +2,15 @@
 <div class="plate-solid plate-center">
 
     <div class="cor-tl"></div><div class="cor-tr"></div><div class="cor-bl"></div><div class="cor-br"></div>
-    <form id="myform" action="/sendmail" method="post">
+    @if($errors->any())
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+    <form id="myform" action="{{ route('sendmail') }}" method="post">
+        {{ csrf_field() }}
         <dl>
             <dt><label for="form-person">Представьтесь</label></dt>
             <dd><input id="form-person" name="form-person" type="text" value="" tabindex="1" data-validation="required"></dd>
