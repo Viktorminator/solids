@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use Illuminate\Http\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
@@ -20,6 +19,7 @@ class Contact extends Mailable
      *
      * @return void
      */
+
     public function __construct(Request $request)
     {
         //

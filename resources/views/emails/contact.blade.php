@@ -16,5 +16,7 @@
     <p>This is another test</p>
 
     @include('beautymail::templates.widgets.newfeatureEnd')
-
+    {{ $request->input('form-person') }}
+    {{ $request->input('form-email') }}
+    {{ $request->input('form-question') }}
 @stop
