@@ -109,22 +109,6 @@ class PostController extends BaseController
         return view('news');
     }
 
-    public function sendmail($request) {
-        \Mail::send('emails.contact',
-            array(
-                'name' => $request->get('form-person'),
-                'phone' => $request->get('form-phone'),
-                'email' => $request->get('form-email'),
-                'organization' => $request->get('form-company'),
-                'user_message' => $request->get('form-question')
-            ), function($message)
-            {
-                $message->from('info@solids.dev');
-                $message->to('viktorminator@gmail.com', 'Admin')->subject('Письмо с Солидс');
-            });
-
-        return \Redirect::route('contact')->with('message', 'Спасибо за Ваше сообщение! Скоро с Вами свяжется менеджер компании');
-    }
     // Call me back! request
     public function callme() {
         $post = Posts::whereAlias('index.html')->first();

@@ -24,20 +24,7 @@ Route::get('/{alias}/', ['uses' => 'PostController@aliasToView']);
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
 Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostController@about']);
 
-Route::post('/sendmail', ['as' => 'sendmail', function() {
-    $validation = validator(
-        request()->only('form-person', 'form-phone','form-email', 'form-company', 'form-question'),
-        [
-            'form-person' => 'required',
-            'form-email' => 'required|email',
-            'form-question' => 'required'
-        ]
-    );
-    if ($validation->passes()) {
-        dd('Все нужные поля заполнены!');
-    }
-    return redirect()->back()->withErrors($validation->errors());
-}]);
+Route::post('/sendmail', ['as' => 'sendmail', 'uses' => 'SendmailController@index']);
 
 Route::get('/stati.html', ['as' => 'stati.html', 'uses' => 'PostController@articles']);
 Route::get('/novosti.html', ['as' => 'novosti.html', 'uses' => 'PostController@news']);
