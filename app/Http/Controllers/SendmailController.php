@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\URL;
 class SendmailController extends Controller
 {
 
-    // 
+    //
     public function index() {
 
         $messages = [
@@ -27,7 +27,9 @@ class SendmailController extends Controller
         $validation = validator($input, $rules, $messages);
 
         if ($validation->passes()) {
-            dd('Все нужные поля заполнены!');
+            Mail::to('viktorminator@gmail.com')->send(new App\Mail\Contact(request()));
+
+            return redirect()->route('contact.success');
         }
 
         return redirect(URL::previous() . "#messages")->withErrors($validation->errors());

@@ -29,6 +29,22 @@ Route::post('/sendmail', ['as' => 'sendmail', 'uses' => 'SendmailController@inde
 Route::get('/stati.html', ['as' => 'stati.html', 'uses' => 'PostController@articles']);
 Route::get('/novosti.html', ['as' => 'novosti.html', 'uses' => 'PostController@news']);
 
+Route::get('contact/success', ['as' => 'contact.success', function () {
+    return view('success');
+}]);
+// Testing email https://github.com/Snowfire/Beautymail
+Route::get('/test', function()
+{
+    $beautymail = app()->make(Snowfire\Beautymail\Beautymail::class);
+    $beautymail->send('emails.welcome', [], function($message)
+    {
+        $message
+            ->from('bar@example.com')
+            ->to('foo@example.com', 'John Smith')
+            ->subject('Welcome!');
+    });
+
+});
 // user check
 Route::group(['middleware' => ['auth']], function(){
     // new form show

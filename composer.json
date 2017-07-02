@@ -9,7 +9,8 @@
         "barryvdh/laravel-debugbar": "^2.3",
         "caouecs/laravel-lang": "~3.0",
         "laravel/framework": "5.3.*",
-        "laravel/scout": "^2.0"
+        "laravel/scout": "^2.0",
+        "snowfire/beautymail": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
