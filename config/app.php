@@ -167,6 +167,8 @@ return [
         /*
          * Package Service Providers...
          */
+        Snowfire\Beautymail\BeautymailServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         //
 
@@ -178,8 +180,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
-        Snowfire\Beautymail\BeautymailServiceProvider::class,
 
     ],
 

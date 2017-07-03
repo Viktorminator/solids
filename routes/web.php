@@ -19,9 +19,6 @@ Route::get('/', 'PostController@index');
 Route::get('/home', ['as' => 'home', 'uses' => 'PostController@index']); // authentification
 Route::get('/pozvonite-mne.html', [ 'as' => '/pozvonite-mne.html','uses' => 'PostController@callme']);
 Route::get('/search', ['as' => 'search', 'uses' => 'GoogleSearchController@index']);
-Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[2-7]');
-Route::get('/{alias}/', ['uses' => 'PostController@aliasToView']);
-Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
 Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostController@about']);
 
 Route::post('/sendmail', ['as' => 'sendmail', 'uses' => 'SendmailController@index']);
@@ -33,18 +30,12 @@ Route::get('contact/success', ['as' => 'contact.success', function () {
     return view('success');
 }]);
 // Testing email https://github.com/Snowfire/Beautymail
-Route::get('/test', function()
-{
-    $beautymail = app()->make(Snowfire\Beautymail\Beautymail::class);
-    $beautymail->send('emails.welcome', [], function($message)
-    {
-        $message
-            ->from('bar@example.com')
-            ->to('foo@example.com', 'John Smith')
-            ->subject('Welcome!');
-    });
+Route::get('/test', ['as'=> 'test', 'uses' => 'SendmailController@test']);
+Route::get('/test2', ['as'=> 'test2', 'uses' => 'SendmailController@test2']);
+Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[2-7]');
+Route::get('/{alias}/', ['uses' => 'PostController@aliasToView']);
+Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
 
-});
 // user check
 Route::group(['middleware' => ['auth']], function(){
     // new form show
