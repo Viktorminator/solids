@@ -33,8 +33,8 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->from($this->request->input('email'))
-            ->subject('Отправленно сообщение с сайта Солидс')
+        return $this->from('info@solids.ru')
+            ->subject('Сообщение с сайта Солидс')
             ->view('emails.contact');
     }
 }

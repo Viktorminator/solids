@@ -12,11 +12,11 @@
     <form id="myform" action="{{ route('sendmail') }}" method="post">
         {{ csrf_field() }}
         <dl>
-            <dt><label for="person">Представьтесь</label> </dt>
+            <dt><label for="person">Представьтесь *</label> </dt>
             <dd><input id="person" name="person" type="text" value="" tabindex="1" required></dd>
         </dl>
         <dl>
-            <dt><label for="phone">Телефон</label></dt>
+            <dt><label for="phone">Телефон *</label></dt>
             <dd><input id="phone" class="phone" name="phone" type="text" value="" tabindex="2"></dd>
         </dl>
         <dl>
@@ -28,7 +28,7 @@
             <dd><input id="company" name="company" type="text" value="" tabindex="4" required></dd>
         </dl>
         <dl>
-            <dt><label for="question">Вопрос или<br>ситуация</label></dt>
+            <dt><label for="question">Вопрос или<br>ситуация *</label></dt>
             <dd><textarea id="question" name="question" rows="5" cols="20" tabindex="5" value="" required></textarea></dd>
         </dl>
         <div class="button">

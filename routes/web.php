@@ -30,8 +30,6 @@ Route::get('contact/success', ['as' => 'contact.success', function () {
     return view('success');
 }]);
 // Testing email https://github.com/Snowfire/Beautymail
-Route::get('/test', ['as'=> 'test', 'uses' => 'SendmailController@test']);
-Route::get('/test2', ['as'=> 'test2', 'uses' => 'SendmailController@test2']);
 Route::get('/{year}/', ['uses' => 'PostController@archive'])->where('year','201[2-7]');
 Route::get('/{alias}/', ['uses' => 'PostController@aliasToView']);
 Route::get('{alias}', ['as' => 'home', 'uses' => 'PostController@aliasToView']);
