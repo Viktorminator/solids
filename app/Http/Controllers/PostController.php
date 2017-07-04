@@ -101,14 +101,6 @@ class PostController extends BaseController
         return view('about-company')->with(compact('post','list'));
     }
 
-    public function articles() {
-        return view('articles');
-    }
-
-    public function news() {
-        return view('news');
-    }
-
     // Call me back! request
     public function callme() {
         $post = Posts::whereAlias('index.html')->first();

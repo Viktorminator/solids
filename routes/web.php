@@ -23,9 +23,6 @@ Route::get('/o-kompanii.html', ['as' => 'o-kompanii.html', 'uses' => 'PostContro
 
 Route::post('/sendmail', ['as' => 'sendmail', 'uses' => 'SendmailController@index']);
 
-Route::get('/stati.html', ['as' => 'stati.html', 'uses' => 'PostController@articles']);
-Route::get('/novosti.html', ['as' => 'novosti.html', 'uses' => 'PostController@news']);
-
 Route::get('contact/success', ['as' => 'contact.success', function () {
     return view('success');
 }]);
