@@ -41,10 +41,9 @@
         </div>
 
         <div class="address">
-            <p>Москва, ул. Угрешская, 2, стр. 33, офис 9
+            <p>Москва, ул.Земляной вал, дом 59, стр. 2, этаж 7, пом.&nbsp;№&nbsp;11
                 <a class="nobr" href="kontaktyi.html">Контактная информация</a>
             </p>
-            <p><a href="buhgalterskij-nalogovyij-konsalting-ot-professionalov.html" title="Наш партнёр">Банк партнер  «Соверен Банк» (ЗАО) </a></p>
         </div>
         <!--p class="vcard" style="visibility:hidden;">
          <p>
