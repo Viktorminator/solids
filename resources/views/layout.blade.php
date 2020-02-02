@@ -41,7 +41,7 @@
         </div>
 
         <div class="address">
-            <p>Москва, ул.Земляной вал, дом 59, стр. 2, этаж 7, пом.&nbsp;№&nbsp;11
+            <p>121170, г. Москва,  ул.  Неверовского, дом 10, стр. 4, мансарда №0, пом. 2, ком. 9.
                 <a class="nobr" href="kontaktyi.html">Контактная информация</a>
             </p>
         </div>
@@ -54,7 +54,7 @@
            <span class="locality">г. Москва</span>,
            <span class="street-address">ул. Угрешская, 2, стр. 33, офис 9</span>
          </p>
-         <p>Телефон: <span class="tel">+7 (495) 698-97-97</span></div>
+         <p>Телефон: <span class="tel">+8(495)295-30-69</span></div>
          <p>Мы работаем <span class="workhours">ежедневно с 09:00 до 24:00</span>
            <span class="url">
              <span class="value-title" title="http://solids.ru/"> </span>
